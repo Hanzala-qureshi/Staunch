@@ -6,6 +6,7 @@ import { HeroComponent } from './hero/hero.component';
 import { ServicesComponent } from './services/services.component';
 import { IndustriesComponent } from './industries/industries.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ContactUsComponent } from "./contact-us/contact-us.component";
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     ServicesComponent,
     IndustriesComponent,
     SlickCarouselModule,
-  ],
+    ContactUsComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

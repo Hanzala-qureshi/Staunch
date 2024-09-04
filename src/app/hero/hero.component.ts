@@ -11,6 +11,8 @@ import { timer } from 'rxjs';
   styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent {
+  private intervalId: any;
+
   slides = [
     {
       title: 'Staffing and Resource Augmentation',
@@ -56,14 +58,21 @@ export class HeroComponent {
 
   currentSlide = 0;
 
-  ngOnInit() {
-    this.startAutoSlide();
-  }
+  // ngOnInit() {
 
-  startAutoSlide() {
-    setInterval(() => {
-      this.nextSlide();
-    }, 10000);
+  //   this.startAutoSlide();
+  // }
+
+  // startAutoSlide() {
+  //   setInterval(() => {
+  //     this.nextSlide();
+  //   }, 10000);
+  // }
+
+  ngOnInit(){
+      this.intervalId = setInterval(()=>{
+        this.nextSlide();
+      },5000)
   }
 
   nextSlide() {
@@ -80,5 +89,11 @@ export class HeroComponent {
   }
   getSlideTransform(): string {
     return `translateX(-${this.currentSlide * 100}%)`;
+  }
+
+  ngOnDestroy() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId); // Clear the interval when the component is destroyed
+    }
   }
 }
