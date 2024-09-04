@@ -1,0 +1,25 @@
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-container {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide .absolute {
+  z-index: 1; /* Ensure the blur overlay is above the image but below text */
+}
+
+.container.relative {
+  z-index: 2; /* Ensure text content is above the blur overlay */
+}
