@@ -8,6 +8,7 @@ import { IndustriesComponent } from './industries/industries.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
+import { VisionComponent } from "./vision/vision.component";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { AboutUsComponent } from "./about-us/about-us.component";
     IndustriesComponent,
     SlickCarouselModule,
     ContactUsComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    VisionComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
