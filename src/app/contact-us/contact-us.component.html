@@ -1,64 +1,64 @@
-<div class="flex flex-col items-center mt-16">
+<div id="contactus" class="flex flex-col items-center mt-16">
   <h1 class="text-2xl sm:text-3xl text-blue-950 font-bold mb-4 text-center">
     Contact Us
   </h1>
   <!-- Line below the heading -->
   <div class="w-32 h-1 bg-blue-950 mb-4"></div>
 </div>
-<div class="w-full h-auto mt-10 mb-32">
+<div class="w-full flex justify-center mt-10 mb-32 px-4 md:px-8">
   <!-- Container for centering and limiting the width of content -->
-  <div class="flex justify-center items-center mx-auto px-4 md:px-8">
-    <div
-      class="w-[80%] bg-white text-black p-6 md:p-8 rounded-3xl shadow-lg flex flex-col items-center"
+  <div
+    class="w-full max-w-lg bg-white text-black p-6 md:p-8 rounded-3xl shadow-lg"
+  >
+    <h1
+      class="text-xl text-center md:text-2xl text-blue-500 font-semibold mb-4"
     >
-      <h1 class="text-xl md:text-2xl text-blue-500 font-semibold mb-4">
-        Drop Us A Message
-      </h1>
-      <p class="w-full md:w-4/5 pb-5 text-center">
-        Get in touch with us, and one of our consultants will contact you.
-      </p>
+      Drop Us A Message
+    </h1>
+    <p class="w-full pb-5 text-center">
+      Get in touch with us, and one of our consultants will contact you.
+    </p>
 
-      <!-- Form tag to group inputs together -->
-      <form action="" method="POST" class="w-full">
-        <input
-          type="text"
-          placeholder="Name"
-          class="border border-gray-400 rounded p-2 w-full mb-3"
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          class="border border-gray-400 rounded p-2 w-full mb-3"
-          required
-        />
-        <input
-          type="tel"
-          placeholder="Phone"
-          class="border border-gray-400 rounded p-2 w-full mb-3"
-        />
-        <input
-          type="text"
-          placeholder="Country"
-          class="border border-gray-400 rounded p-2 w-full mb-3"
-        />
-        <input
-          type="text"
-          placeholder="Company Name"
-          class="border border-gray-400 rounded p-2 w-full mb-3"
-        />
-        <textarea
-          placeholder="Add your comment..."
-          class="border border-gray-400 p-2 w-full mb-3 rounded h-20 outline-none resize-none"
-        ></textarea>
-        <button
-          type="submit"
-          class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition-colors"
-        >
-          Send
-        </button>
-      </form>
-      <!-- End of form -->
-    </div>
+    <!-- Form tag to group inputs together -->
+    <form action="" method="POST" class="w-full space-y-3">
+      <input
+        type="text"
+        placeholder="Name"
+        class="border border-gray-400 rounded p-2 w-full"
+        required
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        class="border border-gray-400 rounded p-2 w-full"
+        required
+      />
+      <input
+        type="tel"
+        placeholder="Phone"
+        class="border border-gray-400 rounded p-2 w-full"
+      />
+      <input
+        type="text"
+        placeholder="Country"
+        class="border border-gray-400 rounded p-2 w-full"
+      />
+      <input
+        type="text"
+        placeholder="Company Name"
+        class="border border-gray-400 rounded p-2 w-full"
+      />
+      <textarea
+        placeholder="Add your comment..."
+        class="border border-gray-400 p-2 w-full rounded h-20 outline-none resize-none"
+      ></textarea>
+      <button
+        type="submit"
+        class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition-colors"
+      >
+        Send
+      </button>
+    </form>
+    <!-- End of form -->
   </div>
 </div>
