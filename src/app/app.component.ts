@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -29,5 +29,12 @@ import { VisionComponent } from "./vision/vision.component";
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'my-project';
+  // title = 'my-project';
+  @ViewChild('aboutus') aboutus!:ElementRef;
+
+  scrollToSection(section:string){
+    if (section === 'section1') {
+      this.aboutus.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

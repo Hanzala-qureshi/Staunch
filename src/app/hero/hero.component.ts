@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { timer } from 'rxjs';
+import { Subscription, timer } from 'rxjs';
 
 @Component({
   selector: 'app-hero',
@@ -11,6 +11,9 @@ import { timer } from 'rxjs';
   styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent {
+  private slideSubscription!: Subscription;
+
+
   slides = [
     {
       title: 'Staffing and Resource Augmentation',
@@ -57,13 +60,10 @@ export class HeroComponent {
   currentSlide = 0;
 
   ngOnInit() {
-    this.startAutoSlide();
-  }
-
-  startAutoSlide() {
-    setInterval(() => {
+    // Store the subscription
+    this.slideSubscription = timer(0, 10000).subscribe(() => {
       this.nextSlide();
-    }, 10000);
+    });
   }
 
   nextSlide() {
@@ -80,5 +80,12 @@ export class HeroComponent {
   }
   getSlideTransform(): string {
     return `translateX(-${this.currentSlide * 100}%)`;
+  }
+
+  ngOnDestroy() {
+    // Unsubscribe to avoid memory leaks
+    if (this.slideSubscription) {
+      this.slideSubscription.unsubscribe();
+    }
   }
 }
