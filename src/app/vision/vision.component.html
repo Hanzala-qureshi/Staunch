@@ -1,8 +1,8 @@
 <div class="w-full min-h-[50vh] mt-12 flex flex-col items-center px-4">
   <!-- Navigation Bar -->
-  <div class="flex flex-wrap justify-center space-x-8 mb-6">
+  <div class="flex flex-wrap justify-center gap-[5px]">
     <button
-      class="px-4 py-2 rounded-3xl border-2 mb-4 hover:border-blue-300 transition-colors"
+      class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors"
       [ngClass]="{
         'bg-blue-700 text-white border-0': activeTab === 'vision',
         'bg-white text-black': activeTab !== 'vision'
@@ -12,7 +12,7 @@
       Vision
     </button>
     <button
-      class="px-4 py-2 rounded-3xl border-2 mb-4 hover:border-blue-300 transition-colors"
+      class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors"
       [ngClass]="{
         'bg-blue-700 text-white border-0': activeTab === 'mission',
         'bg-white text-black': activeTab !== 'mission'
@@ -22,7 +22,7 @@
       Mission
     </button>
     <button
-      class="px-4 py-2 rounded-3xl border-2 mb-4 hover:border-blue-300 transition-colors"
+      class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors m-0"
       [ngClass]="{
         'bg-blue-700 text-white border-0': activeTab === 'values',
         'bg-white text-black': activeTab !== 'values'
@@ -32,7 +32,7 @@
       Values
     </button>
     <button
-      class="px-4 py-2 rounded-3xl border-2 mb-4 hover:border-blue-300 transition-colors"
+      class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors"
       [ngClass]="{
         'bg-blue-700 text-white border-0': activeTab === 'whyChooseUs',
         'bg-white text-black': activeTab !== 'whyChooseUs'

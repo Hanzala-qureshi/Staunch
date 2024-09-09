@@ -209,6 +209,7 @@
   <div
     [ngClass]="{ hidden: !menuOpen, flex: menuOpen }"
     class="navbar w-full md:flex md:justify-center mt-4 md:mt-0"
+    style="justify-content: end; text-align: end"
   >
     <nav>
       <ul class="flex flex-col md:flex-row list-none">
@@ -216,14 +217,24 @@
           <a
             href="#home"
             class="block px-4 py-2 text-lg transition-colors duration-300 hover:bg-[#1da1f2] hover:text-white rounded-lg"
-            >Home</a
+            [ngClass]="{ 'bg-[#1da1f2] text-white': selectedMenu === 'home' }"
+            (click)="scrollTo('home')"
           >
+            Home
+          </a>
         </li>
         <li class="mb-2 md:mb-0 md:mx-4">
           <a
             (click)="scrollTo('about-us')"
             class="block px-4 py-2 text-lg transition-colors duration-300 hover:bg-[#1da1f2] hover:text-white rounded-lg"
             >About Us</a
+          >
+        </li>
+        <li class="mb-2 md:mb-0 md:mx-4">
+          <a
+            (click)="scrollTo('industries')"
+            class="block px-4 py-2 text-lg transition-colors duration-300 hover:bg-[#1da1f2] hover:text-white rounded-lg"
+            >Industries</a
           >
         </li>
         <li class="mb-2 md:mb-0 md:mx-4">
