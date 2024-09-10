@@ -1,6 +1,6 @@
 <div class="w-full min-h-[50vh] mt-12 flex flex-col items-center px-4">
   <!-- Navigation Bar -->
-  <div class="flex flex-wrap justify-center gap-[5px]">
+  <div class="flex flex-wrap justify-center gap-[10px]">
     <button
       class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors"
       [ngClass]="{
@@ -22,7 +22,7 @@
       Mission
     </button>
     <button
-      class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors m-0"
+      class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors"
       [ngClass]="{
         'bg-blue-700 text-white border-0': activeTab === 'values',
         'bg-white text-black': activeTab !== 'values'
@@ -40,6 +40,16 @@
       (click)="setActiveTab('whyChooseUs')"
     >
       Why Choose Us
+    </button>
+    <button
+      class="px-4 py-2 rounded-3xl border-2 hover:border-blue-300 transition-colors"
+      [ngClass]="{
+        'bg-blue-700 text-white border-0': activeTab === 'ourApproach',
+        'bg-white text-black': activeTab !== 'ourApproach'
+      }"
+      (click)="setActiveTab('ourApproach')"
+    >
+      Our Approach
     </button>
   </div>
 
@@ -104,13 +114,6 @@
               every aspect of our work.
             </p>
           </div>
-          <div class="text-left mt-6">
-            <h3 class="text-lg font-bold mb-2">Innovative Solutions</h3>
-            <p class="text-gray-700">
-              Leveraging the latest technologies to create solutions that are
-              not only functional but also innovative and forward-thinking.
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -135,42 +138,26 @@
             </p>
           </div>
           <div class="text-left mt-6">
-            <h3 class="text-lg font-bold mb-2">Personalized Service</h3>
-            <p class="text-gray-700">
-              We tailor our approach to meet the specific needs of both clients
-              and candidates.
-            </p>
-          </div>
-          <div class="text-left mt-6">
-            <h3 class="text-lg font-bold mb-2">Results-Driven</h3>
-            <p class="text-gray-700">
-              Our focus is on delivering high-quality candidates and achieving
-              successful placements.
-            </p>
-          </div>
-          <div class="text-left mt-6">
-            <h3 class="text-lg font-bold mb-2">Customer-Centric Approach</h3>
-            <p class="text-gray-700">
-              We prioritize our clients' needs and work closely with them to
-              deliver solutions that align with their business goals.
-            </p>
-          </div>
-          <div class="text-left mt-6">
             <h3 class="text-lg font-bold mb-2">Proven Track Record</h3>
             <p class="text-gray-700">
               We have a history of successfully delivering complex software
               projects on time and within budget.
             </p>
           </div>
-          <div class="text-left mt-6">
-            <h3 class="text-lg font-bold mb-2">Expert Support</h3>
-            <p class="text-gray-700">
-              We offer dedicated customer support and training to ensure
-              seamless implementation and ongoing success.
-            </p>
-          </div>
         </div>
       </div>
+    </div>
+
+    <!-- Our Approach Content -->
+    <div *ngIf="activeTab === 'ourApproach'">
+      <h2 class="text-2xl font-bold mb-4">Our Approach</h2>
+      <p class="text-gray-700">
+        We adopt a collaborative approach to digital transformation, working
+        closely with clients to understand their unique challenges and goals. By
+        integrating emerging technologies, processes, frameworks, and
+        methodologies, we provide scalable and sustainable solutions that
+        deliver measurable results.
+      </p>
     </div>
   </div>
 </div>
