@@ -17,42 +17,42 @@ export class HeroComponent {
   slides = [
     {
       title: 'Staffing and Resource Augmentation',
-      description: 'Our values define Staunch Consulting Solution...',
+      description: 'Individual and personalized approach.',
       backgroundImage: '../../assets/hero1.jpg',
     },
     {
       title: 'Support and Maintenance',
-      description: 'We guide you in delivering excellence...',
+      description: 'Empowering businesses to achieve operational excellence.',
       backgroundImage: '../../assets/hero2.jpg',
     },
     {
       title: 'Quality Assurance and Testing',
-      description: 'Trust in every IT solution...',
+      description: 'We ensure your applications meet the highest quality user experiences.',
       backgroundImage: '../../assets/hero3.jpg',
     },
     {
       title: 'Software Development',
-      description: 'Trust in every IT solution...',
+      description: 'Committed to delivering innovative, high-quality software solutions that drive business success.',
       backgroundImage: '../../assets/hero4.jpg',
     },
     {
       title: 'Industry 4.0 Services',
-      description: 'Trust in every IT solution...',
+      description: 'Helping businesses harness the power of technology .',
       backgroundImage: '../../assets/hero5.jpg',
     },
     {
       title: 'Strategic Consulting and Advisory',
-      description: 'Trust in every IT solution...',
+      description: 'we offer unparalleled guidance to help you to unlock growth potential.',
       backgroundImage: '../../assets/hero6.jpg',
     },
     {
       title: 'Agile Transformation Consulting',
-      description: 'Trust in every IT solution...',
+      description: 'We empower businesses to enhance their agility.',
       backgroundImage: '../../assets/hero7.jpg',
     },
     {
       title: 'Business Processing Outsourcing',
-      description: 'Trust in every IT solution...',
+      description: 'Partner with us to experience unparalleled service and support.',
       backgroundImage: '../../assets/hero8.jpg',
     },
   ];
