@@ -34,10 +34,11 @@
           <div>
             <button
               class="px-5 py-3 text-[#13315C] bg-[#F4CA4B] rounded-lg mx-2"
+              (click)="scrollToService('contactus')"
             >
               Get Started
             </button>
-            <button class="px-5 py-3 text-[#13315C] bg-white rounded-lg mx-2">
+            <button class="px-5 py-3 text-[#13315C] bg-white rounded-lg mx-2" (click)="scrollToService(slide.targetId)">
               Our Services
             </button>
           </div>
@@ -58,7 +59,7 @@
     </div>
 
     <!-- Slide indicators -->
-    <div class="absolute bottom-4 flex space-x-2">
+    <!-- <div class="absolute bottom-4 flex space-x-2">
       <span
         *ngFor="let slide of slides; let i = index"
         class="w-3 h-3 rounded-full cursor-pointer"
@@ -68,6 +69,6 @@
         }"
         (click)="setSlide(i)"
       ></span>
-    </div>
+    </div> -->
   </div>
 </section>

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .hero-slider {
   position: relative;
   overflow: hidden;
