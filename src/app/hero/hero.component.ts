@@ -37,7 +37,7 @@ export class HeroComponent {
     },
     {
       title: 'Software Development',
-      description: 'Committed to delivering innovative, high-quality software solutions that drive business success.',
+      description: 'Committed to delivering innovative software solutions.',
       backgroundImage: '../../assets/hero4.jpg',
       targetId: 'software-development',
     },
@@ -70,12 +70,14 @@ export class HeroComponent {
   currentSlide = 0;
 
   ngOnInit() {
-    // Store the subscription
+    this.startSlideTimer();
+  }
+
+  startSlideTimer() {
     this.slideSubscription = timer(0, 10000).subscribe(() => {
       this.nextSlide();
     });
   }
-
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % this.slides.length;
   }
@@ -97,6 +99,17 @@ export class HeroComponent {
     // Scroll to the target section in the service component
     this.viewportScroller.scrollToAnchor(targetId);
   }
+
+  pauseSlideTimer() {
+    if (this.slideSubscription) {
+      this.slideSubscription.unsubscribe();
+    }
+  }
+
+  resumeSlideTimer() {
+    this.startSlideTimer();
+  }
+
 
   ngOnDestroy() {
     // Unsubscribe to avoid memory leaks

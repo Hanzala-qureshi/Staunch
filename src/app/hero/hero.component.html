@@ -5,6 +5,8 @@
   <!-- Slider content -->
   <div
     class="relative flex flex-col items-center justify-center h-[500px] overflow-hidden"
+    (mouseenter)="pauseSlideTimer()"
+    (mouseleave)="resumeSlideTimer()"
   >
     <div
       class="slide-container flex transition-transform duration-500 ease-in-out"
