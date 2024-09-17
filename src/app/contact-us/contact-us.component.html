@@ -20,7 +20,7 @@
     </p>
 
     <!-- Form tag to group inputs together -->
-    <form action="" method="POST" class="w-full space-y-3">
+    <form (submit)="onSubmit($event)" class="w-full space-y-3">
       <input
         type="text"
         placeholder="Name"
@@ -59,6 +59,18 @@
         Send
       </button>
     </form>
-    <!-- End of form -->
   </div>
 </div>
+
+<div class="modal" [ngClass]="{ hidden: !isOpen }">
+  <button class="btn--close-modal" (click)="closeModal()">&times;</button>
+  <p class="text-sm modal__header">
+    Thank you for reaching out to us, we will contact you shortly
+  </p>
+</div>
+<div
+  #overlay
+  class="overlay"
+  [ngClass]="{ hidden: !isOpen }"
+  (click)="closeModal()"
+></div>

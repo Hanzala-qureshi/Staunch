@@ -6,9 +6,9 @@ import { HeroComponent } from './hero/hero.component';
 import { ServicesComponent } from './services/services.component';
 import { IndustriesComponent } from './industries/industries.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { ContactUsComponent } from "./contact-us/contact-us.component";
-import { AboutUsComponent } from "./about-us/about-us.component";
-import { VisionComponent } from "./vision/vision.component";
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { VisionComponent } from './vision/vision.component';
 
 @Component({
   selector: 'app-root',
@@ -23,18 +23,23 @@ import { VisionComponent } from "./vision/vision.component";
     SlickCarouselModule,
     ContactUsComponent,
     AboutUsComponent,
-    VisionComponent
-],
+    VisionComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   // title = 'my-project';
-  @ViewChild('aboutus') aboutus!:ElementRef;
+  isOpen?: Boolean;
+  @ViewChild('aboutus') aboutus!: ElementRef;
 
-  scrollToSection(section:string){
+  scrollToSection(section: string) {
     if (section === 'section1') {
       this.aboutus.nativeElement.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  setIsOpen($event: Boolean) {
+    this.isOpen = $event;
   }
 }
